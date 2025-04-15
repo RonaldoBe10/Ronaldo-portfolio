@@ -131,7 +131,7 @@ export function Navbar() {
           </Button>
           <ThemeToggle />
           <Button size="sm" className="rounded-full gap-1.5" variant="default" asChild>
-            <a href="/ronaldo_santos_curriculo.pdf" download>
+            <a href={`${import.meta.env.BASE_URL}ronaldo_santos_curriculo.pdf`} download>
               <Download className="h-4 w-4" />
               <span>{t('download_cv')}</span>
             </a>
@@ -202,7 +202,7 @@ export function Navbar() {
             </Link>
             <div className="pt-4">
               <Button className="w-full flex gap-2 items-center justify-center rounded-full" asChild>
-                <a href="/ronaldo_santos_curriculo.pdf" download>
+                <a href={`${import.meta.env.BASE_URL}ronaldo_santos_curriculo.pdf`} download>
                   <Download className="h-4 w-4" />
                   <span>{t('download_cv')}</span>
                 </a>

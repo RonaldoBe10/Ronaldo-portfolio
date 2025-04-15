@@ -48,7 +48,7 @@ const About = () => {
               </div>
               
               <Button className="flex items-center gap-2" asChild>
-                <a href="/ronaldo_santos_curriculo.pdf" download>
+                <a href={`${import.meta.env.BASE_URL}ronaldo_santos_curriculo.pdf`} download>
                   <DownloadCloud className="h-4 w-4" />
                   {t('download_cv')}
                 </a>

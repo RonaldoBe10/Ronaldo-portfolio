@@ -6,7 +6,7 @@ import { DownloadCloud } from "lucide-react";
 // Componente de botão para download do CV
 export const CVDownloadButton = ({ children }: { children: React.ReactNode }) => {
   return (
-    <a href="/ronaldo_santos_curriculo.pdf" download>
+    <a href={`${import.meta.env.BASE_URL}ronaldo_santos_curriculo.pdf`} download>
       {children}
     </a>
   );
@@ -17,7 +17,7 @@ export const CVViewer = () => {
   return (
     <div className="flex justify-center">
       <Button className="flex items-center gap-2" asChild>
-        <a href="/ronaldo_santos_curriculo.pdf" download>
+        <a href={`${import.meta.env.BASE_URL}ronaldo_santos_curriculo.pdf`} download>
           <DownloadCloud className="h-4 w-4" />
           Baixar CV
         </a>

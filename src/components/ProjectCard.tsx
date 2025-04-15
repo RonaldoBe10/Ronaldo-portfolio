@@ -110,14 +110,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
             asChild 
             className="w-full"
           >
-            <a 
-              href={project.externalUrl || "#"} 
+            <Link 
+              to={project.externalUrl || "#"} 
               target={project.externalUrl?.startsWith('/') ? "_self" : "_blank"}
               rel="noopener noreferrer"
             >
               {showModaisLink ? t('access_platform') : t('access_project')}
               <ExternalLink className="ml-1 h-3.5 w-3.5" />
-            </a>
+            </Link>
           </Button>
         </div>
       </CardContent>
