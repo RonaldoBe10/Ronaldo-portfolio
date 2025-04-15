@@ -25,7 +25,7 @@ const About = () => {
             <div>
               <img 
                 //src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                src="/images/img_sobre.png" 
+                src="images/img_sobre.png" 
                 alt={t('professional_name')} 
                 className="rounded-lg shadow-lg w-full"
               />
