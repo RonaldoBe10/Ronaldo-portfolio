@@ -21,3 +21,18 @@ O portfólio foi desenvolvido para:
 ## Estrutura do Projeto
 
 A estrutura do projeto segue uma organização modular, facilitando a manutenção e expansão:
+
+# Para realizar as atualizaçoes
+# 1. Salva as mudanças no repositório local (commit)
+git add .
+git commit -m "Atualizações feitas no projeto"
+
+# 2. Gera os arquivos de produção (build)
+npm run build
+
+# 3. Faz o deploy (ex: envia para GitHub Pages, Vercel, etc)
+npm run deploy
+
+# 4. Por fim, sobe tudo para o GitHub
+git push origin main  # ou o branch que estiver usando
+
