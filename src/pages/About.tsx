@@ -88,19 +88,19 @@ const About = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="border-l-2 border-primary pl-4 py-2">
-                  <p className="text-sm text-muted-foreground">{t('scrum_period')}</p>
-                  <h4 className="font-medium">{t('scrum_title')}</h4>
-                  <p className="text-sm">{t('scrum_institution')}</p>
-                </div>
-                <div className="border-l-2 border-primary pl-4 py-2">
                   <p className="text-sm text-muted-foreground">{t('sixsigma_period')}</p>
                   <h4 className="font-medium">{t('sixsigma_title')}</h4>
                   <p className="text-sm">{t('sixsigma_institution')}</p>
                 </div>
                 <div className="border-l-2 border-primary pl-4 py-2">
-                  <p className="text-sm text-muted-foreground">{t('pm_period')}</p>
-                  <h4 className="font-medium">{t('pm_title')}</h4>
-                  <p className="text-sm">{t('pm_institution')}</p>
+                  <p className="text-sm text-muted-foreground">{t('scrum_period')}</p>
+                  <h4 className="font-medium">{t('scrum_title')}</h4>
+                  <p className="text-sm">{t('scrum_institution')}</p>
+                </div>
+                <div className="border-l-2 border-primary pl-4 py-2">
+                  <p className="text-sm text-muted-foreground">{t('oracle_period')}</p>
+                  <h4 className="font-medium">{t('oracle_title')}</h4>
+                  <p className="text-sm">{t('oracle_institution')}</p>
                 </div>
               </CardContent>
             </Card>
