@@ -64,6 +64,11 @@ const About = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="border-l-2 border-primary pl-4 py-2">
+                  <p className="text-sm text-muted-foreground">{t('mba_period')}</p>
+                  <h4 className="font-medium">{t('mba_title')}</h4>
+                  <p className="text-sm">{t('mba_institution')}</p>
+                </div>
+                <div className="border-l-2 border-primary pl-4 py-2">
                   <p className="text-sm text-muted-foreground">{t('undergrad_period')}</p>
                   <h4 className="font-medium">{t('undergrad_title')}</h4>
                   <p className="text-sm">{t('undergrad_institution')}</p>
@@ -72,11 +77,6 @@ const About = () => {
                   <p className="text-sm text-muted-foreground">{t('logistics_period')}</p>
                   <h4 className="font-medium">{t('logistics_title')}</h4>
                   <p className="text-sm">{t('logistics_institution')}</p>
-                </div>
-                <div className="border-l-2 border-primary pl-4 py-2">
-                  <p className="text-sm text-muted-foreground">{t('oracle_period')}</p>
-                  <h4 className="font-medium">{t('oracle_title')}</h4>
-                  <p className="text-sm">{t('oracle_institution')}</p>
                 </div>
               </CardContent>
             </Card>
