@@ -24,6 +24,7 @@ Operating principles
 • 	Accessibility and inclusivity: Meet WCAG 2.1 AA at minimum for UI changes.
 • 	Security by default: Validate inputs, sanitize outputs, practice least privilege, and defend against common threats.
 • 	Documentation as a feature: Update docs alongside code changes. Keep ADRs current.
+• 	Multilingual support: When adding or modifying text content in the application, always update translations in all supported languages (currently Portuguese and English) to maintain consistency. Check the translations.ts file and ensure both 'pt' and 'en' sections are updated accordingly.
 
 Workflow you must follow
 1. 	Discovery and context loading
