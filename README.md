@@ -120,6 +120,38 @@ git push origin main  # Envia para a branch main
 - **Resolver Conflitos**: Edite os arquivos conflitantes, depois `git add` e `git commit`.
 - **Resetar Mudanças Locais**: `git reset --hard` (cuidado, perde mudanças não commitadas).
 
+## Como Funciona a Esteira de Deploy (GitHub Actions)
+
+Este projeto usa **GitHub Actions** para automatizar o deploy do site no GitHub Pages. A "esteira" é um workflow que roda automaticamente sempre que você faz push ou abre um Pull Request para a branch `main`. Ela evita que você tenha que fazer o build e deploy manualmente.
+
+### Quando a Esteira É Acionada?
+- **Apenas em eventos na branch `main`:**
+  - Push direto para `main` (ex.: `git push origin main`).
+  - Pull Request (PR) para `main` (para testar builds antes do merge).
+- **Não roda em outras branches!** Se você trabalha em `feature/desenvolvimento`, push para ela não aciona a esteira – perfeito para desenvolvimento sem afetar o site.
+
+### O Que a Esteira Faz? (Passo a Passo Simplificado)
+1. **Checkout**: Baixa o código da branch `main`.
+2. **Setup Node.js**: Instala Node.js (versão 18) e configura cache.
+3. **Instalar Dependências**: Roda `npm ci` para instalar pacotes.
+4. **Build**: Executa `npm run build` para gerar a pasta `dist` com arquivos otimizados.
+5. **Deploy**: Publica a `dist` na branch `gh-pages` usando um token seguro (PAT).
+
+- **Duração**: 1-3 minutos.
+- **Resultado**: O site é atualizado automaticamente em https://ronaldobe10.github.io/Ronaldo-portfolio.
+
+### Cenários Comuns
+- **Trabalhando em uma Branch**: Push para `feature/xyz` → Código vai para GitHub, mas esteira não roda (site não muda).
+- **Testar sem Merge**: Abra um PR para `main` → Esteira roda como teste.
+- **Deploy Final**: Merge o PR em `main` → Esteira roda e atualiza o site.
+- **Subir Código sem Deploy**: Push para qualquer branch não-`main`.
+
+### Como Monitorar
+- Vá para https://github.com/RonaldoBe10/Ronaldo-portfolio/actions.
+- Veja logs de runs passados. Clique em "Re-run jobs" se precisar repetir.
+
+Essa automação garante que o site esteja sempre atualizado após mudanças em produção!
+
 ## Como Contribuir
 
 Contribuições são bem-vindas! Se você quiser adicionar funcionalidades, corrigir bugs ou melhorar a documentação, siga estes passos:
