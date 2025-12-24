@@ -122,7 +122,7 @@ git push origin main  # Envia para a branch main
 
 ## Como Funciona a Esteira de Deploy (GitHub Actions)
 
-Este projeto usa **GitHub Actions** para automatizar o deploy do site no GitHub Pages. A "esteira" é um workflow que roda automaticamente sempre que você faz push ou abre um Pull Request para a branch `main`. Ela evita que você tenha que fazer o build e deploy manualmente.
+Este projeto usa **GitHub Actions** para automatizar o deploy do site no GitHub Pages. A "esteira" é um workflow que roda automaticamente sempre que você faz push ou abre um Pull Request para a branch `main`. Ela evita que você tenha que fazer o build e deploy manualmente
 
 ### Quando a Esteira É Acionada?
 - **Apenas em eventos na branch `main`:**
