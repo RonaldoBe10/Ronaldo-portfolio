@@ -38,5 +38,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'  # Só deploya se for main
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_PAT }}  # Use PAT em vez de GITHUB_TOKEN
           publish_dir: ./dist  # Pasta gerada pelo build
