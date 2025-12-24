@@ -1,6 +1,6 @@
 name: Deploy to GitHub Pages
 
-# Workflow atualizado para deploy automático
+# Workflow atualizado para deploy automático com PAT
 
 on:
   push:
